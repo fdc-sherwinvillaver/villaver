@@ -9,7 +9,6 @@
                     </div>
                 </div>
             </div>
-            <?php echo $this->Form->create('UserInformation',array('id' => 'registerInfo')); ?>
             <div class="col-md-3">
                 <div class="panel panel-primary"> 
                     <div class="panel-heading"> 
@@ -36,47 +35,47 @@
                     </div> 
                     <div class="panel-body"> 
                         <div class="row">
-                            
-                            <div class="col-md-4" id="first_name">
-                                <?php echo $this->Form->input('first_name',array('class' => 'form-control','placeholder' => 'Firstname','label' => false)); ?>
+                            <?php echo $this->Form->create('UserInformation',array('id' => 'registerInfo')); ?>
+                            <div class="col-md-4">
+                                <?php echo $this->Form->input('first_name',array('class' => 'form-control','placeholder' => 'Firstname','label' => false,'id' => 'first_name')); ?>
                                 <div class="text-center message" style="display:none;">
                                     <span></span>
                                 </div>
                             </div>
-                            <div class="col-md-4" id="last_name">
-                                <?php echo $this->Form->input('last_name',array('class' => 'form-control','placeholder' => 'Lastname','label' => false)); ?>
+                            <div class="col-md-4">
+                                <?php echo $this->Form->input('last_name',array('class' => 'form-control','placeholder' => 'Lastname','label' => false,'id' => 'last_name')); ?>
                                 <div class="text-center message" style="display:none;">
                                     <span></span>
                                 </div>
                             </div>
-                            <div class="col-md-4" id="middle_name">
-                                <?php echo $this->Form->input('middle_name',array('class' => 'form-control','placeholder' => 'Middlename','label' => false)); ?>
-                                <div class="text-center message" style="display:none;">
-                                    <span></span>
-                                </div>
-                            </div>
-                            <div class="col-md-12"><br></div>
-                            <div class="col-md-4" id="email">
-                                <?php echo $this->Form->input('email',array('class' => 'form-control','placeholder' => 'Email Address','label' => false)); ?>
-                                <div class="text-center message" style="display:none;">
-                                    <span></span>
-                                </div>
-                            </div>
-                            <div class="col-md-4" id="gender">
-                                <?php echo $this->Form->input('gender',array('options' => array('Male','Female'),'empty' => 'Gender','class' => 'form-control','label' => false)); ?>
-                                <div class="text-center message" style="display:none;">
-                                    <span></span>
-                                </div>
-                            </div>
-                            <div class="col-md-4" id="birthday">
-                                <?php echo $this->Form->input('birthday',array('type' => 'text','class' => 'form-control','label' => false,'id' => 'date')); ?>
+                            <div class="col-md-4">
+                                <?php echo $this->Form->input('middle_name',array('class' => 'form-control','placeholder' => 'Middlename','label' => false,'id' => 'middle_name')); ?>
                                 <div class="text-center message" style="display:none;">
                                     <span></span>
                                 </div>
                             </div>
                             <div class="col-md-12"><br></div>
-                            <div class="col-md-12" id="hobby">
-                                <?php echo $this->Form->input('hobby',array('type' => 'textarea','class' => 'form-control','placeholder' => 'Hobby','label' => false,'style' => 'resize:none; height:300px;')); ?>
+                            <div class="col-md-4">
+                                <?php echo $this->Form->input('email',array('class' => 'form-control','placeholder' => 'Email Address','label' => false,'id' => 'email')); ?>
+                                <div class="text-center message" style="display:none;">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <?php echo $this->Form->input('gender',array('options' => array('Male','Female'),'empty' => 'Gender','class' => 'form-control','label' => false,'id' => 'gender')); ?>
+                                <div class="text-center message" style="display:none;">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <?php echo $this->Form->input('birthday',array('type' => 'text','class' => 'form-control','label' => false,'id' => 'birthday')); ?>
+                                <div class="text-center message" style="display:none;">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-12"><br></div>
+                            <div class="col-md-12">
+                                <?php echo $this->Form->input('hobby',array('type' => 'textarea','class' => 'form-control','placeholder' => 'Hobby','label' => false,'style' => 'resize:none; height:300px;','id' => 'hobby')); ?>
                                 <div class="text-center message" style="display:none;">
                                     <span></span>
                                 </div>
