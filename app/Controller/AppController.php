@@ -33,30 +33,30 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	public $ext = '.php';
 
-	public function beforeFilter(){
-		parent::beforeFilter();
-		// $this->Auth->allow('index','register','login','logout','loggedin');
+	public function beforeFilter() {
+	    parent::beforeFilter();
+	    $this->Auth->allow(array('register','index','edit','delete')); // ibutang dre ang mga page nga gusto ninyu maaccess bsan wla mo nilogin
 	}
 
-	// public $components = array(
-	// 	'Flash',
-	// 	'Paginator',
-	//     'DebugKit.Toolbar',
-	//     'Session',
-	//     'Cookie',
-	//     'Auth' => array(
-	//       'authenticate'=>array(
-	//         	'Form'=>array(
-	//           	'fields'=>array('username' => 'username' , 'password' => 'password')
-	//         )
-	//       ),
-	//       'loginRedirect' => array('controller' => 'home', 'action' => 'loggedin'),
-	//       'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
-	//       'loginAction' => array('controller' => 'users', 'action' => 'login'),
-	//       'authError' => 'You must be logged in to view this page.',
-	//       'loginError' => 'Invalid Username or Password entered, please try again.'
-	//     )
- //  	);
+	public $components = array(
+		'Flash',
+		'Paginator',
+	    'DebugKit.Toolbar',
+	    'Session',
+	    'Cookie',
+	    'Auth' => array(
+	      'authenticate'=>array(
+	        	'Form'=>array(
+	          	'fields'=>array('username' => 'username' , 'password' => 'password')
+	        )
+	      ),
+	      'loginRedirect' => array('controller' => 'home', 'action' => 'loggedin'),
+	      'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
+	      'loginAction' => array('controller' => 'users', 'action' => 'login'),
+	      'authError' => 'You must be logged in to view this page.',
+	      'loginError' => 'Invalid Username or Password entered, please try again.'
+	    )
+  	);
 
  //  	public function loggedin(){
 	// 	if(isset($this->Session->read('Auth')['User']['id'])){

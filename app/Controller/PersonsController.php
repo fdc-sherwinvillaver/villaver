@@ -3,6 +3,11 @@
 *PersonsController 
 */
 class PersonsController extends AppController {
+	public function beforeFilter() {
+	    parent::beforeFilter();
+	    $this->Auth->allow(array()); 
+	}
+
 
 	function index() {
 		$this->layout = 'bootstrap';
@@ -77,7 +82,7 @@ class PersonsController extends AppController {
 				        'class' => 'alert alert-success'
 			    )
 			));
-			
+
 			return $this->redirect(array('action' => 'index'));
 		}
 
