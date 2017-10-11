@@ -35,35 +35,35 @@ class AppController extends Controller {
 
 	public function beforeFilter(){
 		parent::beforeFilter();
-		$this->Auth->allow('index','register','login','logout','loggedin');
+		// $this->Auth->allow('index','register','login','logout','loggedin');
 	}
 
-	public $components = array(
-		'Flash',
-		'Paginator',
-	    'DebugKit.Toolbar',
-	    'Session',
-	    'Cookie',
-	    'Auth' => array(
-	      'authenticate'=>array(
-	        	'Form'=>array(
-	          	'fields'=>array('username' => 'username' , 'password' => 'password')
-	        )
-	      ),
-	      'loginRedirect' => array('controller' => 'home', 'action' => 'loggedin'),
-	      'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
-	      'loginAction' => array('controller' => 'users', 'action' => 'login'),
-	      'authError' => 'You must be logged in to view this page.',
-	      'loginError' => 'Invalid Username or Password entered, please try again.'
-	    )
-  	);
+	// public $components = array(
+	// 	'Flash',
+	// 	'Paginator',
+	//     'DebugKit.Toolbar',
+	//     'Session',
+	//     'Cookie',
+	//     'Auth' => array(
+	//       'authenticate'=>array(
+	//         	'Form'=>array(
+	//           	'fields'=>array('username' => 'username' , 'password' => 'password')
+	//         )
+	//       ),
+	//       'loginRedirect' => array('controller' => 'home', 'action' => 'loggedin'),
+	//       'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
+	//       'loginAction' => array('controller' => 'users', 'action' => 'login'),
+	//       'authError' => 'You must be logged in to view this page.',
+	//       'loginError' => 'Invalid Username or Password entered, please try again.'
+	//     )
+ //  	);
 
-  	public function loggedin(){
-		if(isset($this->Session->read('Auth')['User']['id'])){
-			$this->redirect('/users/update_profile');
-		}
-		else{
-			$this->redirect('/home/index');
-		}
-	}
+ //  	public function loggedin(){
+	// 	if(isset($this->Session->read('Auth')['User']['id'])){
+	// 		$this->redirect('/users/update_profile');
+	// 	}
+	// 	else{
+	// 		$this->redirect('/home/index');
+	// 	}
+	// }
 }
