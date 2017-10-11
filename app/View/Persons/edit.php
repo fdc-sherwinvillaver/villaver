@@ -16,6 +16,10 @@
                 </div>
             </div>
             <div class="col-md-8 col-md-offset-2">
+                <div>
+                    <?php echo $this->Html->link('List of Person',array('action' => '/'),array('class' => 'btn btn-primary')); ?>
+                </div>
+                <br>
                 <div class="">
                     <div class="panel panel-primary"> 
                         <div class="panel-heading"> 

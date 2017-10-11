@@ -32,7 +32,7 @@
                                     <td><?php echo $person['Person']['modified']; ?></td>
                                     <td><?php echo $person['Person']['created_ip']; ?></td>
                                     <td><?php echo $person['Person']['modified_ip']; ?></td>
-                                    <td><?php echo $this->Html->link("Edit",array('action' => 'edit',$person['Person']['id']))." || ".$this->Html->link("Delete",array('action' => 'delete',$person['Person']['id']),array('confirm' => 'Delete this data?')); ?></td>
+                                    <td><?php echo $this->Html->link("Edit",array('action' => 'edit',$person['Person']['id']),array('class' => 'btn btn-primary'))." ".$this->Html->link("Delete",array('action' => 'delete',$person['Person']['id']),array('confirm' => 'Delete this data?','class' => 'btn btn-danger')); ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

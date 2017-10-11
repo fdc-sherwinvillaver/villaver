@@ -82,7 +82,6 @@ class PersonsController extends AppController {
 				        'class' => 'alert alert-success'
 			    )
 			));
-
 			return $this->redirect(array('action' => 'index'));
 		}
 
