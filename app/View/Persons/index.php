@@ -27,7 +27,7 @@
                                 <tr>
                                     <td><?php echo $person['Person']['fullname']; ?></td>
                                     <td><?php echo $person['Person']['gender']; ?></td>
-                                    <td><?php echo $person['Person']['age']; ?></td>
+                                    <td><?php echo ($person['Person']['age'] < 0) ? 0 : $person['Person']['age']; ?></td>
                                     <td><?php echo $person['Person']['created']; ?></td>
                                     <td><?php echo $person['Person']['modified']; ?></td>
                                     <td><?php echo $person['Person']['created_ip']; ?></td>
