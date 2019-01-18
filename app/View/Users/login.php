@@ -12,9 +12,7 @@
             <div class="col-sm-4 col-sm-offset-2">
                 <div class="home-wrapper">
                     <?php echo $this->Form->create('User',array('class' => 'intro-form','role' => 'form','id' => 'loginUser')); ?>
-                    <div class="text-center alert alert-danger">
-                        <?php echo $this->Session->flash('auth'); ?>
-                    </div>
+                    <?php echo $this->Session->flash('auth'); ?>
                     <h3 class="text-center"> Login </h3>
                     <div class="text-center message" style="display:none;">
                         <span></span>
@@ -30,7 +28,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>

@@ -33,9 +33,9 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	public $ext = '.php';
 
-	public function beforeFilter(){
-		parent::beforeFilter();
-		$this->Auth->allow('index','register','login','logout','loggedin');
+	public function beforeFilter() {
+	    parent::beforeFilter();
+	    $this->Auth->allow(array('register','index','edit','delete')); // ibutang dre ang mga page nga gusto ninyu maaccess bsan wla mo nilogin
 	}
 
 	public $components = array(
@@ -58,12 +58,12 @@ class AppController extends Controller {
 	    )
   	);
 
-  	public function loggedin(){
-		if(isset($this->Session->read('Auth')['User']['id'])){
-			$this->redirect('/users/update_profile');
-		}
-		else{
-			$this->redirect('/home/index');
-		}
-	}
+ //  	public function loggedin(){
+	// 	if(isset($this->Session->read('Auth')['User']['id'])){
+	// 		$this->redirect('/users/update_profile');
+	// 	}
+	// 	else{
+	// 		$this->redirect('/home/index');
+	// 	}
+	// }
 }
